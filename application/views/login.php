@@ -23,6 +23,7 @@
 
 <body>
     <div class="box">
+        <?= $this->session->flashdata('message'); ?>
         <form action="">
             <input type="text" name="email" id="" placeholder="Email" autofocus>
             <input type="password" name="password" id="" placeholder="Password">

@@ -23,14 +23,17 @@
 
 <body>
     <div class="box">
-        <form action="">
-            <input type="text" name="name" id="" placeholder="Name" autofocus>
+        <form method="POST" action="<?= base_url('auth/register') ?>">
+            <input type="text" name="name" id="" placeholder="Name" autofocus value="<?= set_value('name'); ?>">
+            <?= form_error('name', '<br><small>', '</small>'); ?>
             <br>
-            <input type="text" name="email" id="" placeholder="Email">
+            <input type="text" name="email" id="" placeholder="Email" value="<?= set_value('email'); ?>">
+            <?= form_error('email', '<br><small>', '</small>'); ?>
             <br>
             <input type="password" name="password" id="" placeholder="Password">
+            <?= form_error('password', '<br><small>', '</small>'); ?>
             <br>
-            <input type="password" name="confirmpw" id="" placeholder="Confirm Password">
+            <input type="password" name="password2" id="" placeholder="Confirm Password">
             <br>
             <input type="submit" value="SUBMIT"><br>
         </form>
