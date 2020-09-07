@@ -24,9 +24,13 @@
 <body>
     <div class="box">
         <?= $this->session->flashdata('message'); ?>
-        <form action="">
+        <form method="POST" action="<?= base_url('auth') ?>">
             <input type="text" name="email" id="" placeholder="Email" autofocus>
+            <?= form_error('email', '<br><small>', '</small>'); ?>
+            <br>
             <input type="password" name="password" id="" placeholder="Password">
+            <?= form_error('password', '<br><small>', '</small>'); ?>
+            <br>
             <input type="submit" value="SUBMIT"><br>
             <a href="<?= base_url('auth/register') ?>">Register</a>
         </form>
